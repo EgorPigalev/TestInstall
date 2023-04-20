@@ -1,0 +1,72 @@
+﻿<Page x:Class="MathSets.MainMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MathSets"
+      mc:Ignorable="d" Style="{StaticResource PageMainStyle}"
+      d:DesignHeight="550" d:DesignWidth="1000"
+      Title="MainMenuPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Label Content="Учебный материал" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="{StaticResource PrimaryColor}" VerticalAlignment="Center" Grid.Row="0" Margin="50, 0, 50, 0"/>
+        <ScrollViewer Grid.Row="1" Margin="50, 0, 50, 0" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical">
+                <StackPanel MouseDown="SPSetAndElements_MouseDown" Name="SPSetAndElements" Style="{StaticResource SPTopics}">
+                    <Grid>
+                        <Ellipse Style="{StaticResource EllipseTopicNumber}"/>
+                        <Label Content="1" Style="{StaticResource LabelTopicNumber}"/>
+                    </Grid>
+                    <Label Content="Множество и его элементы" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+                <StackPanel Name="SPEqualSets" MouseDown="SPEqualSets_MouseDown" Style="{StaticResource SPTopics}">
+                    <Grid>
+                        <Ellipse Style="{StaticResource EllipseTopicNumber}"/>
+                        <Label Content="2" Style="{StaticResource LabelTopicNumber}"/>
+                    </Grid>
+                    <Label Content="Равные множества. Пустое множество" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+                <StackPanel Name="SpLessonFourAndFive" Style="{StaticResource SPTopics}" MouseDown="SpLessonFourAndFive_MouseDown">
+                    <Grid>
+                        <Ellipse Style="{StaticResource EllipseTopicNumber}"/>
+                        <Label Content="3" Style="{StaticResource LabelTopicNumber}"/>
+                    </Grid>
+                    <Label Content="Диаграмма Эйлера-Венна. Знаки ∈ и ∉" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+                <StackPanel Name="SpLessonSix" Style="{StaticResource SPTopics}" MouseDown="SpLessonSix_MouseDown">
+                    <Grid>
+                        <Ellipse Style="{StaticResource EllipseTopicNumber}"/>
+                        <Label Content="4" Style="{StaticResource LabelTopicNumber}"/>
+                    </Grid>
+                    <Label Content="Подмножество. Знаки ⊂ и ⊄" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+                <StackPanel Name="SPIntersectionSets" Style="{StaticResource SPTopics}" MouseDown="SPIntersectionSets_MouseDown">
+                    <Grid>
+                        <Ellipse Style="{StaticResource EllipseTopicNumber}"/>
+                        <Label Content="5" Style="{StaticResource LabelTopicNumber}"/>
+                    </Grid>
+                    <Label Content="Пересечение множеств. Свойства пересечения" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource SPTopics}" MouseDown="StackPanel_MouseDown">
+                    <Grid>
+                        <Ellipse Style="{StaticResource EllipseTopicNumber}"/>
+                        <Label Content="6" Style="{StaticResource LabelTopicNumber}"/>
+                    </Grid>
+                    <Label Content="Объединение множеств" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+                <StackPanel Name="SPSplittingSets" Style="{StaticResource SPTopics}" MouseDown="SPSplittingSets_MouseDown">
+                    <Grid>
+                        <Ellipse Style="{StaticResource EllipseTopicNumber}"/>
+                        <Label Content="7" Style="{StaticResource LabelTopicNumber}"/>
+                    </Grid>
+                    <Label Content="Разбиение множеств на части по свойствам" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <Button Name="BtnExit" Content="Выйти" Grid.Row="2" Style="{StaticResource ButtonMainStyle}" HorizontalAlignment="Left" Margin="15 0 0 0" Click="BtnExit_Click" Cursor="Hand"/>
+    </Grid>
+</Page>

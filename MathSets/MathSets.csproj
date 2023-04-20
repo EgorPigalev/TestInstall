@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEF8E8BE-69DF-4C83-A219-29EC71AEFE34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MathSets</RootNamespace>
+    <AssemblyName>MathSets</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="pages\CombiningSetsPage.xaml.cs">
+      <DependentUpon>CombiningSetsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Figure.cs" />
+    <Compile Include="pages\EqualSetsSolvingTasksPage.xaml.cs">
+      <DependentUpon>EqualSetsSolvingTasksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\LessonFourAndFive.xaml.cs">
+      <DependentUpon>LessonFourAndFive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\LessonSix.xaml.cs">
+      <DependentUpon>LessonSix.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\SplittingSetsSolvingTasks.xaml.cs">
+      <DependentUpon>SplittingSetsSolvingTasks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\CorrectResult.xaml.cs">
+      <DependentUpon>CorrectResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\GuideWindow.xaml.cs">
+      <DependentUpon>GuideWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\HintEqualSetsWindow.xaml.cs">
+      <DependentUpon>HintEqualSetsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\HintCombiningSetsWindow.xaml.cs">
+      <DependentUpon>HintCombiningSetsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\HintLessonFourAndFive.xaml.cs">
+      <DependentUpon>HintLessonFourAndFive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\HintLessonSix.xaml.cs">
+      <DependentUpon>HintLessonSix.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\HintSplittingSetsWindow.xaml.cs">
+      <DependentUpon>HintSplittingSetsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ResultCombiningSetsWindow.xaml.cs">
+      <DependentUpon>ResultCombiningSetsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ResultEqualSetsSolvengTasksWindow.xaml.cs">
+      <DependentUpon>ResultEqualSetsSolvengTasksWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ResultLessonFourAndFive.xaml.cs">
+      <DependentUpon>ResultLessonFourAndFive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ResultLessonSix.xaml.cs">
+      <DependentUpon>ResultLessonSix.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ResultSetAndElementsTasksWindow.xaml.cs">
+      <DependentUpon>ResultSetAndElementsTasksWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ResultSplittingSetsWindows.xaml.cs">
+      <DependentUpon>ResultSplittingSetsWindows.xaml</DependentUpon>
+    </Compile>
+    <Page Include="pages\EqualSetsSolvingTasksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\CombiningSetsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\LessonFourAndFive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\LessonSix.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\SplittingSetsSolvingTasks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\CorrectResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\GuideWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\HintEqualSetsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\HintCombiningSetsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\HintLessonFourAndFive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\HintLessonSix.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\HintSetElementsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\HintSplittingSetsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ResultCombiningSetsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ResultEqualSetsSolvengTasksWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ResultIntersectionSetsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\HintIntersectionSetsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\IntersectionSetsSolvingTasksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\Base.cs" />
+    <Compile Include="classes\EllipseGeneration.cs" />
+    <Compile Include="windows\HintSetElementsWindow.xaml.cs">
+      <DependentUpon>HintSetElementsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ResultIntersectionSetsWindow.xaml.cs">
+      <DependentUpon>ResultIntersectionSetsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\HintIntersectionSetsWindow.xaml.cs">
+      <DependentUpon>HintIntersectionSetsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\IntersectionSetsSolvingTasksPage.xaml.cs">
+      <DependentUpon>IntersectionSetsSolvingTasksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="pages\SetAndElementsSolvingTasksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ResultLessonFourAndFive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ResultLessonSix.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ResultSetAndElementsTasksWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ResultSplittingSetsWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pages\SetAndElementsSolvingTasksPage.xaml.cs">
+      <DependentUpon>SetAndElementsSolvingTasksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\ResultCorrect.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="resources\HintMenu.png" />
+    <Resource Include="resources\UpdateMenu.png" />
+    <Resource Include="resources\Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

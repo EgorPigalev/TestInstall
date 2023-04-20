@@ -1,0 +1,132 @@
+﻿<Page x:Class="MathSets.pages.LessonFourAndFive"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MathSets.pages"
+      mc:Ignorable="d" Style="{StaticResource PageMainStyle}"
+      d:DesignHeight="550" d:DesignWidth="1000"
+      Title="LessonFourAndFive">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Border Style="{StaticResource BorderHeader}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Диаграмма Эйлера-Венна. Знаки ∈ и ∉" Style="{StaticResource LabelHeaderText}"/>
+                <Button Grid.Column="1" Name="BtnHint" Content="?" Style="{StaticResource ButtonMainStyle}" Margin="0 2 20 2" Click="BtnHint_Click"/>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Style="{StaticResource BorderMain}">
+            <ScrollViewer>
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Name="SpTaskFirst" Background="White">
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock Name="TbTaskFirst" Text="1) Дано множество А {"/>
+                            <StackPanel Name="SpFiguresTaskFirst" Orientation="Horizontal"/>
+                            <TextBlock Text="}. "/>
+                            <TextBlock Text="Изобрази данное множество на рисунке."/>
+                        </WrapPanel>
+                        <Canvas Name="CnvTaskFirst" Height="280" Width="870" ClipToBounds="True" Margin="0 10 0 10"/>
+                        <Button Name="BtnCheckTaskFirst" Content="Проверить" Style="{StaticResource ButtonMainStyle}" HorizontalAlignment="Center" Click="BtnCheckTaskFirst_Click"/>
+                    </StackPanel>
+
+                    <Menu Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <MenuItem Uid="1" Header="..." Style="{StaticResource MenuItemWithDropdown}" Cursor="Hand">
+                            <MenuItem Header="Подсказка" Click="MenuGuide_Click" Style="{StaticResource SubMenuItem}">
+                                <MenuItem.Icon>
+                                    <Image Source="/resources/HintMenu.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Обновить" Click="MenuRefresh_Click" Style="{StaticResource SubMenuItem}">
+                                <MenuItem.Icon>
+                                    <Image Source="/resources/UpdateMenu.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+                    </Menu>
+
+                    <StackPanel Grid.Row="1" Name="SpTaskSecond" Background="White" Margin="0 20 0 0">
+                        <TextBlock Name="TbTaskSecond" Text="2) Дана диаграмма. Выбери нужные знаки." Margin="0 0 0 10"/>
+                        
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" Width="310">
+                                <StackPanel Name="SpTaskSecondSetA" Margin="0 0 30 0"/>
+                                <StackPanel Name="SpTaskSecondSetB"/>
+                            </StackPanel>
+
+                            <Canvas Name="CnvTaskSecond" Height="280" Width="550"/>
+                        </StackPanel>
+                        
+                        <Button Name="BtnCheckTaskSecond" Content="Проверить" Style="{StaticResource ButtonMainStyle}" HorizontalAlignment="Center" Margin="10" Click="BtnCheckTaskSecond_Click"/>
+                    </StackPanel>
+
+                    <Menu Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 20 0 0">
+                        <MenuItem Uid="2" Header="..." Style="{StaticResource MenuItemWithDropdown}">
+                            <MenuItem Header="Подсказка" Click="MenuGuide_Click" Style="{StaticResource SubMenuItem}">
+                                <MenuItem.Icon>
+                                    <Image Source="/resources/HintMenu.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Обновить" Click="MenuRefresh_Click" Style="{StaticResource SubMenuItem}">
+                                <MenuItem.Icon>
+                                    <Image Source="/resources/UpdateMenu.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+                    </Menu>
+
+                    <StackPanel Grid.Row="2" Name="SpTaskThree" Background="White" Margin="0 20 0 0">
+                        <TextBlock Name="TbTaskThree" Text="3) Отметь элементы на диаграмме, если известно, что:" Margin="0 0 0 10"/>
+
+                        <StackPanel Name="SpTaskThreeWork" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <StackPanel Name="SpCondition" Orientation="Horizontal" Width="310"/>
+                            <Canvas Name="CnvTaskThree" Height="280" Width="550"/>
+                        </StackPanel>
+
+                        <Button Name="BtnCheckTaskThree" Content="Проверить" Style="{StaticResource ButtonMainStyle}" HorizontalAlignment="Center" Margin="10" Click="BtnCheckTaskThree_Click"/>
+                    </StackPanel>
+
+                    <Menu Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 20 0 0">
+                        <MenuItem Uid="3" Header="..." Style="{StaticResource MenuItemWithDropdown}">
+                            <MenuItem Header="Подсказка" Click="MenuGuide_Click" Style="{StaticResource SubMenuItem}">
+                                <MenuItem.Icon>
+                                    <Image Source="/resources/HintMenu.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Обновить" Click="MenuRefresh_Click" Style="{StaticResource SubMenuItem}">
+                                <MenuItem.Icon>
+                                    <Image Source="/resources/UpdateMenu.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+                    </Menu>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Button Name="BtnBack" Content="Назад" Grid.Row="2" Style="{StaticResource ButtonMainStyle}" HorizontalAlignment="Left" Margin="15" Click="BtnBack_Click"/>
+        </Grid>
+    </Grid>
+</Page>

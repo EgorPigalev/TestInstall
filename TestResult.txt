@@ -1,0 +1,17 @@
+Результаты тестирования.
+Успешно:
+	1. GetCoordinateY_FalseResultForUpContainer();
+	2. GetOffset_EqualResultForCorrectlyWidthSecond();
+	3. GetOffset_EqualResultForCountZero();
+	4. GetCoordinateY_TrueResultForUpContainer();
+	5. GetCoordinateY_EqualResultForHeightZero();
+	6. GetOffset_EqualResultForCorrectlyWidthFirst();
+	7. GetOffset_EqualResultForWidthLessStandart();
+	8. GetOffset_IsNotNull();
+	9. GetOffset_IsInstanceOfTypeInt32();
+	10. GetCoordinateY_EqualResultForSizeFigureZero();
+	11. GetCoordinateY_IsNotNull();
+	12. GetOffset_EqualResultForWidthZero();
+	13. GetCoordinateY_FalseResultForDownContainer();
+	14. GetCoordinateY_TrueResultForDownContainer();
+	15. GetCoordinateY_IsInstanceOfTypeInt32();
